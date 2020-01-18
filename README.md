@@ -6,4 +6,4 @@ Current weather and forecasts in your city
 
 open terminal and run this command : python weather.py 
 
-![Default screen](/output.png?raw=true "Default screen")
+![Output](output.PNG)
