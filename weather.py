@@ -1,13 +1,18 @@
 import requests
+import os
 
-api_address = 'http://api.openweathermap.org/data/2.5/weather?appid=b149867edf3c9f3df9709b22b7ad882a&q='
+api_key = os.environ.get('WEATHER_KEY')
+add = '&q='
+
+api_add = 'http://api.openweathermap.org/data/2.5/weather?appid=' + str(api_key) + add
 
 city = input('Enter the City Name : ')
 
-url = api_address + city
+url = api_add + city
 
 json_data = requests.get(url).json()
 
+#print(url)
 
 min_temp = json_data['main']['temp_min']
 max_temp = json_data['main']['temp_max']
